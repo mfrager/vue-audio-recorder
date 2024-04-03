@@ -95,7 +95,6 @@
         const record = this.recorder.records[0]
         const data = new FormData()
         data.append('audio', record.blob, `${this.filename}.mp3`)
-        data.append('path', window.location.pathname)
 
         const headers = Object.assign(this.headers, {})
         headers['Content-Type'] = `multipart/form-data; boundary=${data._boundary}`
